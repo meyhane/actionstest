@@ -1,4 +1,4 @@
-# azure-ad
+# actiontest
 [![Build Status](https://travis-ci.org/sesam-community/azure-ad.svg?branch=master)](https://travis-ci.org/sesam-community/azure-ad)
 
 Sesam - Microsoft Graph API connector that can serve both as a source or sink.
