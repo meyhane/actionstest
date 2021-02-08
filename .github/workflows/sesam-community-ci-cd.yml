@@ -15,7 +15,7 @@ jobs:
           GITHUB_REF: ${{ github.ref }}
           GITHUB_SHA: ${{ github.sha }}
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
-          DOCKER_USERNAME: 'egemenyavuz'
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: bash <(curl -s https://raw.githubusercontent.com/meyhane/guidelines/git-actions/after_success.sh)
         shell: bash
