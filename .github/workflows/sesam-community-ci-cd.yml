@@ -21,4 +21,8 @@ jobs:
           ls 
           echo "---"
           ls ../
+          echo "---"
+          ls ../../
+          echo "---"
+          ls ../../../
         shell: bash
