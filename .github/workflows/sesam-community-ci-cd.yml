@@ -11,7 +11,7 @@ jobs:
       - name: Run a one-line script
         env:
           GITHUB: ${{ toJSON(github) }}
-          GITHUB_REPO: ${{ github.repo }}
+          GITHUB_REPO: ${{ github.repository }}
           GITHUB_BASE_REF: ${{ github.base_ref }}
           GITHUB_REF: ${{ github.ref }}
           GITHUB_SHA: ${{ github.sha }}
