@@ -1,0 +1,22 @@
+name: SesamCommunity CI&CD
+
+on: [push, pull_request, release]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a one-line script
+        env:
+          GITHUB: ${{ toJSON(github) }}
+          GITHUB_REPO: ${{ github.repo }}
+          GITHUB_BASE_REF: ${{ github.base_ref }}
+          GITHUB_REF: ${{ github.ref }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
+          DOCKER_USERNAME: ${{ github.owner }}
+          DOCKER_PASSWORD: ${{ secrets.SuperSecret }}
+        run: bash <(curl -s https://raw.githubusercontent.com/meyhane/guidelines/git-actions/after_success.sh)
+        shell: bash
