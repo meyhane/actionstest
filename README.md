@@ -6,7 +6,7 @@ Features:
   * offers dedicated URL routes for _user_, _group_ and _planner_ operations. See "URL paths" section below.
   * implements cached authentication
   * streams results for GET requests
-  * handles paging implicitly
+  * handles paging implicitly 
 
 ### Azure AD access
 
