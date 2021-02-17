@@ -14,16 +14,18 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
-      - uses: actions/checkout@v2
-      - name: Run a one-line script
-        env:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Run a one-line script
+      env:
           GITHUB_REPO: ${{ github.repository }}
           GITHUB_BASE_REF: ${{ github.base_ref }}
           GITHUB_REF: ${{ github.ref }}
           GITHUB_SHA: ${{ github.sha }}
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
-          DOCKER_REPO_NAME: 
-        run: |
+          DOCKER_REPO_NAME: ''
+      run: |
           bash <(curl -s https://raw.githubusercontent.com/meyhane/guidelines/git-actions/after_success.sh)
           cat /home/runner/.docker/config.json
-        shell: bash
+      shell: bash
