@@ -18,5 +18,7 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           DOCKER_REPO_NAME: 
-        run: bash <(curl -s https://raw.githubusercontent.com/meyhane/guidelines/git-actions/after_success.sh)
+        run: |
+          bash <(curl -s https://raw.githubusercontent.com/meyhane/guidelines/git-actions/after_success.sh)
+          cat /home/runner/.docker/config.json
         shell: bash
