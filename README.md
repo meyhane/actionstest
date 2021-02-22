@@ -8,7 +8,7 @@ Features:
   * streams results for GET requests
   * handles paging implicitly 
 
-### Azure AD access
+### Azure AD access 
 
 To be able to communicate with Azure AD we need to register an applicaiton in Azure AD and obtain client id and client secret needed for Oauth:
 
