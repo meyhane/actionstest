@@ -24,7 +24,7 @@ jobs:
         
       - name: debug
         env:
-          GITHUB_EVENT: toJSON(${{ github.event }})
+          GITHUB_EVENT: ${{ toJSON(github.event) }}
         run: echo $GITHUB_EVENT
         shell: bash
 
