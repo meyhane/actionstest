@@ -22,6 +22,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
+      - name: debug
+        env:
+          GITHUB_EVENT: toJSON(${{ github.event }})
+        run: echo $GITHUB_EVENT
+        shell: bash
+
       - name: dockerbuild, dockerpublish
         env:
           GITHUB_REPO: ${{ github.repository }}
