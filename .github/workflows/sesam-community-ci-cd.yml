@@ -26,9 +26,9 @@ jobs:
         env:
           GITHUB_EVENT: ${{ toJSON(github.event) }}
           GITHUB_EVENTNAME: ${{ github.event_name }}
-          GITHUB_EVENTPATH: ${{ github.event_path }}
-          
-        run: echo $GITHUB_EVENT |
+          GITHUB_EVENTPATH: ${{ github.event_path }}          
+        run: |
+          echo $GITHUB_EVENT
           echo $GITHUB_EVENTNAME
           echo $GITHUB_EVENTPATH
         shell: bash
