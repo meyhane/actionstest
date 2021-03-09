@@ -3,6 +3,8 @@ name: SesamCommunity CI&CD
 on: 
   pull_request:
   push:
+    tags-ignore:
+      - '*.*'
   release:
     types: [published]
 
