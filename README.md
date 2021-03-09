@@ -9,7 +9,6 @@ Features:
   * handles paging implicitly 
 
 ### Azure AD access 
-
 To be able to communicate with Azure AD we need to register an applicaiton in Azure AD and obtain client id and client secret needed for Oauth:
 
 Navigate to https://aad.portal.azure.com -> Dashboard -> App Registrations and create new app
